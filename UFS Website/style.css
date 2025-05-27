@@ -1,0 +1,364 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: moveStars 20s linear infinite;
+  z-index: 0;
+  opacity: 0.1;
+}
+
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: 200px;
+  animation: float 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+    animation: none;
+  }
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: #00AEEF;
+  text-shadow: 0 0 10px #00AEEF;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+input, button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+input {
+  width: 250px;
+}
+
+button {
+  background-color: #00AEEF;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007EAE;
+}
+
+#result {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+  z-index: 1;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  z-index: 1;
+}
+
+.footer a {
+  color: #00AEEF;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.contacts {
+  margin-top: 1.5rem;
+  z-index: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.icon {
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.home-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 900px;
+  text-align: center;
+  z-index: 1;
+}
+
+.home-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #00AEEF;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 6px #00AEEF;
+}
+
+.home-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.home-gallery {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-gallery img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 174, 239, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.home-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.ufs-navbar {
+  width: 100%;
+  padding: 0.8rem 2rem;
+  background-color: #0c111a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.3);
+  flex-wrap: wrap;
+}
+
+.ufs-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.ufs-logo {
+  height: 48px;
+  width: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.ufs-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 10px #00AEEF;
+  white-space: nowrap;
+}
+
+.ufs-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100%;
+  margin-right: 3.5rem; /* shifted navbar slightly left */
+}
+
+.ufs-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  margin-left: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.ufs-nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.ufs-nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00AEEF;
+  transition: width 0.3s ease;
+}
+
+.ufs-nav-links li a:hover {
+  color: #00AEEF;
+}
+
+.ufs-nav-links li a:hover::after {
+  width: 100%;
+}
+
+.page-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 900px;
+  text-align: center;
+  z-index: 1;
+}
+
+.page-section h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: #00AEEF;
+  text-shadow: 0 0 8px #00AEEF;
+  margin-bottom: 1rem;
+}
+
+.page-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.result-section {
+  text-align: center;
+  margin-top: 8rem;
+  z-index: 1;
+}
+
+.contact-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.contact-section h2 {
+  color: #00AEEF;
+  text-shadow: 0 0 8px #00AEEF;
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.contact-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 0 10px rgba(0, 174, 239, 0.2);
+  transition: transform 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 174, 239, 0.4);
+}
+
+.contact-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #00AEEF;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card h3 {
+  margin: 0.3rem 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #00AEEF;
+}
+
+.contact-card .desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .ufs-title {
+    font-size: 1.1rem;
+  }
+
+  .ufs-nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .ufs-nav-links li a {
+    font-size: 0.9rem;
+  }
+}
