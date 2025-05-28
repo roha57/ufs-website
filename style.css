@@ -1,3 +1,10 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -5,9 +12,10 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: #1e1e1e;
   font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
+  background-color: #1e1e1e;
+  color: white;
+  line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,14 +25,15 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none;
 }
 
+/* Stars background animation */
 .stars {
   position: fixed;
   width: 100%;
@@ -41,6 +50,7 @@ body::-webkit-scrollbar {
   to { background-position: 1000px 1000px; }
 }
 
+/* Floating logo */
 .logo {
   position: absolute;
   top: 20px;
@@ -57,14 +67,7 @@ body::-webkit-scrollbar {
   100% { transform: translateY(0px); }
 }
 
-@media (max-width: 768px) {
-  .logo {
-    width: 80px;
-    height: 80px;
-    animation: none;
-  }
-}
-
+/* Typography */
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
@@ -107,6 +110,7 @@ button:hover {
   z-index: 1;
 }
 
+/* Footer */
 .footer {
   margin-top: 2rem;
   font-size: 0.95rem;
@@ -135,6 +139,7 @@ button:hover {
   margin-right: 8px;
 }
 
+/* Home Section */
 .home-section {
   padding: 6rem 2rem 4rem;
   max-width: 900px;
@@ -175,6 +180,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Navbar */
 .ufs-navbar {
   width: 100%;
   padding: 0.8rem 2rem;
@@ -219,17 +225,15 @@ button:hover {
   display: flex;
   justify-content: flex-end;
   max-width: 100%;
-  margin-right: 3.5rem; /* shifted navbar slightly left */
+  margin-right: 3.5rem;
 }
 
 .ufs-nav-links {
   list-style: none;
   display: flex;
   gap: 3rem;
-  margin-left: 0;
   margin: 0;
   padding: 0;
-  min-width: 0;
   flex-wrap: wrap;
 }
 
@@ -264,6 +268,7 @@ button:hover {
   width: 100%;
 }
 
+/* Page Section */
 .page-section {
   padding: 6rem 2rem 4rem;
   max-width: 900px;
@@ -284,12 +289,14 @@ button:hover {
   color: #ccc;
 }
 
+/* Result Section */
 .result-section {
   text-align: center;
   margin-top: 8rem;
   z-index: 1;
 }
 
+/* Contact Section */
 .contact-section {
   margin-top: 4rem;
   padding: 2rem;
@@ -347,18 +354,52 @@ button:hover {
   line-height: 1.4;
 }
 
-@media (max-width: 768px) {
-  .ufs-title {
-    font-size: 1.1rem;
-  }
+/* Events Section */
+.events-section {
+  padding: 6rem 2rem 3rem;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .ufs-nav-links {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
+.events-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #00AEEF;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 10px #00AEEF;
+}
 
-  .ufs-nav-links li a {
-    font-size: 0.9rem;
-  }
+.event-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.event-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.event-img {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 174, 239, 0.2);
+}
+
+.event-content {
+  width: 50%;
+}
+
+.event-content h3 {
+  color: #00AEEF;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.event-content p {
+  color: #d0d0d0;
+  font-size: 1rem;
+  font-weight: 400;
 }
