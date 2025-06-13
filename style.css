@@ -181,6 +181,7 @@ button:hover {
 }
 
 /* Navbar */
+/* 🌐 Base Navbar Styling */
 .ufs-navbar {
   width: 100%;
   padding: 0.8rem 2rem;
@@ -235,6 +236,7 @@ button:hover {
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  transition: all 0.3s ease;
 }
 
 .ufs-nav-links li a {
@@ -268,6 +270,68 @@ button:hover {
   width: 100%;
 }
 
+/* 🍔 Hamburger Toggle */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .ufs-navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .ufs-logo {
+    height: 40px;
+  }
+
+  .ufs-title {
+    font-size: 1.1rem;
+  }
+
+  .ufs-nav {
+    margin-right: 0;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .ufs-nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #0b111f;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 174, 239, 0.15);
+    z-index: 1000;
+  }
+
+  .ufs-nav-links.show {
+    display: flex;
+  }
+
+  .ufs-nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* 🧱 Prevent content from hiding behind fixed navbar */
+.home-section,
+.page-section,
+.contact-section {
+  margin-top: 90px;
+}
 /* Page Section */
 .page-section {
   padding: 6rem 2rem 4rem;
@@ -494,3 +558,4 @@ button:hover {
     columns: 1;
   }
 }
+/* gallery page */
