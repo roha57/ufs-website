@@ -324,6 +324,17 @@ button:hover {
   .ufs-nav-links li {
     margin: 10px 0;
   }
+  @media (max-width: 768px) {
+  .ufs-title {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .ufs-title {
+    font-size: 3vw;
+  }
+}
 }
 
 /* 🧱 Prevent content from hiding behind fixed navbar */
