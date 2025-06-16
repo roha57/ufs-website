@@ -337,15 +337,64 @@ button:hover {
 }
 }
 
+.ufs-welcome {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+  color: #d0d0d0;
+}
+
+.ufs-welcome h2 {
+  color: #00AEEF;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 6px #00AEEF;
+}
+
+.ufs-welcome ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.ufs-welcome ul li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.ufs-welcome p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Nested list (e.g., under Gameplay Variety) */
+.ufs-welcome ul ul {
+  margin-top: 0.3rem;
+  padding-left: 1.2rem;
+  list-style-type: circle;
+}
+
+@media (max-width: 768px) {
+  .ufs-welcome {
+    padding: 2rem 1rem;
+  }
+
+  .ufs-welcome h2 {
+    font-size: 1.5rem;
+  }
+}
 /* 🧱 Prevent content from hiding behind fixed navbar */
 .home-section,
 .page-section,
 .contact-section {
-  margin-top: 90px;
+  margin-top: 10px;
 }
 /* Page Section */
 .page-section {
-  padding: 6rem 2rem 4rem;
+  padding: 2rem 2rem 2rem;
   max-width: 900px;
   text-align: center;
   z-index: 1;
@@ -356,7 +405,6 @@ button:hover {
   font-size: 2rem;
   color: #00AEEF;
   text-shadow: 0 0 8px #00AEEF;
-  margin-bottom: 1rem;
 }
 
 .page-section p {
@@ -481,7 +529,22 @@ button:hover {
   font-size: 1rem;
   font-weight: 400;
 }
-/* UFS Page Styling */
+@media (max-width: 768px) {
+  .img-right,
+  .event-block {
+    flex-direction: column;
+  }
+
+  .event-img,
+  .event-content {
+    width: 100%;
+  }
+
+  .ufs-terms ul {
+    columns: 1;
+  }
+}
+/* how to play (rules page) styling*/
 .ufs-wrapper {
   max-width: 1200px;
   margin-top: 50px;
@@ -569,4 +632,60 @@ button:hover {
     columns: 1;
   }
 }
+.ufs-download {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.pdf-button {
+  display: inline-block;
+  background-color: #00AEEF;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 174, 239, 0.3);
+}
+
+.pdf-button:hover {
+  background-color: #008bb9;
+}
+
 /* gallery page */
+.gallery-section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-heading {
+  margin-top: 30px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #00AEEF;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #00AEEF;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
