@@ -141,7 +141,7 @@ button:hover {
 
 /* Home Section */
 .home-section {
-  padding: 6rem 2rem 4rem;
+  padding: 0rem 2rem;
   max-width: 900px;
   text-align: center;
   z-index: 1;
@@ -151,33 +151,14 @@ button:hover {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: #00AEEF;
-  margin-bottom: 0.5rem;
+  margin-top: 6rem;
   text-shadow: 0 0 6px #00AEEF;
 }
 
 .home-section p {
   font-size: 1.1rem;
   color: #ccc;
-  margin-bottom: 2rem;
-}
-
-.home-gallery {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.home-gallery img {
-  width: 250px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 174, 239, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.home-gallery img:hover {
-  transform: scale(1.05);
+  margin-bottom: 1rem;
 }
 
 /* Navbar */
@@ -338,7 +319,7 @@ button:hover {
 }
 
 .ufs-welcome {
-  padding: 3rem 1.5rem;
+  padding: 0rem 1rem;
   max-width: 1000px;
   margin: auto;
   font-family: 'Montserrat', sans-serif;
@@ -379,7 +360,7 @@ button:hover {
 
 @media (max-width: 768px) {
   .ufs-welcome {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
 
   .ufs-welcome h2 {
@@ -390,11 +371,11 @@ button:hover {
 .home-section,
 .page-section,
 .contact-section {
-  margin-top: 10px;
+  margin-top: 0px;
 }
 /* Page Section */
 .page-section {
-  padding: 2rem 2rem 2rem;
+  padding: 1rem 2rem 2rem;
   max-width: 900px;
   text-align: center;
   z-index: 1;
@@ -421,7 +402,7 @@ button:hover {
 
 /* Contact Section */
 .contact-section {
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 2rem;
   z-index: 1;
 }
