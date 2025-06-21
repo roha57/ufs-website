@@ -51,7 +51,7 @@ body::-webkit-scrollbar {
 }
 
 /* Floating logo */
-.logo {
+/* .logo {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -59,24 +59,24 @@ body::-webkit-scrollbar {
   height: 200px;
   animation: float 3s ease-in-out infinite;
   z-index: 1;
-}
-
+} */
+/* 
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
-}
+} */
 
 /* Typography */
-h1 {
+/* h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: #00AEEF;
   text-shadow: 0 0 10px #00AEEF;
   margin-bottom: 1rem;
   z-index: 1;
-}
-
+} */
+/* 
 input, button {
   padding: 10px 20px;
   font-size: 1rem;
@@ -86,29 +86,29 @@ input, button {
   outline: none;
   transition: 0.3s ease;
   z-index: 1;
-}
-
+} */
+/* 
 input {
   width: 250px;
-}
+} */
 
-button {
+/* button {
   background-color: #00AEEF;
   color: #fff;
   cursor: pointer;
-}
-
+} */
+/* 
 button:hover {
   background-color: #007EAE;
-}
-
+} */
+/* 
 #result {
   margin-top: 1rem;
   font-size: 1.2rem;
   color: #00ffcc;
   text-shadow: 0 0 5px #00ffcc;
   z-index: 1;
-}
+} */
 
 /* Footer */
 .footer {
@@ -317,7 +317,7 @@ button:hover {
   }
 }
 }
-
+/* 
 .ufs-welcome {
   padding: 0rem 1rem;
   max-width: 1000px;
@@ -325,81 +325,97 @@ button:hover {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.7;
   color: #d0d0d0;
+} */
+
+/* === Left-Aligned Home Page Styles === */
+.home-section,
+.page-section,
+.ufs-welcome {
+  text-align: left;
+  padding: 0.5rem;
+  margin: 0 auto;
+  max-width: 900px;
+  z-index: 1;
 }
 
+.home-section h2,
+.page-section h2,
 .ufs-welcome h2 {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: #00AEEF;
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
   text-shadow: 0 0 6px #00AEEF;
 }
 
-.ufs-welcome ul {
-  padding-left: 1.5rem;
+.home-section p,
+.page-section p,
+.ufs-welcome p {
+  text-align: left;
+  font-size: 1.1rem;
+  color: #ccc;
   margin-bottom: 1rem;
+  line-height: 1.7;
+}
+.ufs-welcome > * {
+  margin-bottom: 1.2rem;
+}
+
+.ufs-welcome ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .ufs-welcome ul li {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
+  margin-bottom: 0.6rem;
 }
-
-.ufs-welcome p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Nested list (e.g., under Gameplay Variety) */
-.ufs-welcome ul ul {
-  margin-top: 0.3rem;
+.ufs-welcome ul {
   padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ufs-welcome ul li {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.ufs-welcome ul ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
   list-style-type: circle;
 }
 
+.ufs-welcome h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #aeefff;
+  margin: 0.3rem 0;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 3px #007EAE;
+}
 @media (max-width: 768px) {
+  .home-section,
+  .page-section,
   .ufs-welcome {
-    padding: 1rem 1rem;
+    padding: 1rem;
   }
 
-  .ufs-welcome h2 {
+  .ufs-welcome h2,
+  .page-section h2,
+  .home-section h2 {
     font-size: 1.5rem;
   }
-}
-/* 🧱 Prevent content from hiding behind fixed navbar */
-.home-section,
-.page-section,
-.contact-section {
-  margin-top: 0px;
-}
-/* Page Section */
-.page-section {
-  padding: 1rem 2rem 2rem;
-  max-width: 900px;
-  text-align: center;
-  z-index: 1;
-}
 
-.page-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: #00AEEF;
-  text-shadow: 0 0 8px #00AEEF;
-}
+  .ufs-welcome ul {
+    padding-left: 1rem;
+  }
 
-.page-section p {
-  font-size: 1.1rem;
-  color: #ccc;
+  .ufs-welcome ul ul {
+    padding-left: 1.2rem;
+  }
 }
-
-/* Result Section */
-.result-section {
-  text-align: center;
-  margin-top: 8rem;
-  z-index: 1;
-}
-
 /* Contact Section */
 .contact-section {
   margin-top: 2rem;
